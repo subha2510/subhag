@@ -1,0 +1,16 @@
+#!/bin/bash 
+for filename in $(ls)
+do
+	# Take extension available in a filename
+	ext=${filename##*\.}	
+	case "$ext" in
+		java) echo "$filename : java source file"
+			;;
+		pdf) echo "$filename : pdf file"
+			;;
+		sh) echo "$filename : shell script file"
+			;;
+		txt) echo "$filename : text file"
+	esac
+done
+
